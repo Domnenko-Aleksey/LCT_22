@@ -6,7 +6,6 @@ img {
 .dan_flex_row, .dan_flex_row_start {
 	display: flex;
 	flex-wrap: wrap;
-	overflow: hidden;
 	align-content: center;
 }
 
@@ -95,6 +94,11 @@ img {
     flex-wrap: wrap;
     justify-content: center;
     overflow: hidden;
+    align-content: center;
+}
+
+.dan_modal_row {
+	display: flex;
     align-content: center;
 }
 
@@ -447,6 +451,7 @@ textarea.dan_input {
 	height: 40px;
 	padding: 10px 25px;
 	font-size: 18px;
+	border-radius: 10px;
 	font-weight: normal;
 	cursor: pointer;
 	text-decoration	:none !important;

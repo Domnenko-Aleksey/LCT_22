@@ -1,4 +1,10 @@
 /* --- General --- */
+.dan_flex_row {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
 .display_none {
 	display: none;
 }

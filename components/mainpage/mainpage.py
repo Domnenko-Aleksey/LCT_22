@@ -3,8 +3,8 @@ import json
 def mainpage(CORE):
     CORE.debug('/components/mainpage/mainpage.py')
 
-    CORE.addHeadFile('/templates/css/DAN.css')
-    CORE.addHeadFile('/templates/css/mainpage.css')
+    CORE.addHeadFile('/templates/general/css/DAN.css')
+    CORE.addHeadFile('/templates/general/css/mainpage.css')
 
     CORE.content = f'''
         <h1>Дашбоард</h1>

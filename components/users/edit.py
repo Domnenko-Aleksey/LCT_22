@@ -3,9 +3,9 @@ from Users import Users
 def edit(CORE):
     CORE.debug('PATH: /users/edit.py')
 
-    CORE.addHeadFile('/templates/css/DAN.css')
-    CORE.addHeadFile('/templates/js/DAN.js')
-    CORE.addHeadFile('/templates/css/edit.css')
+    CORE.addHeadFile('/templates/general/css/DAN.css')
+    CORE.addHeadFile('/templates/general/js/DAN.js')
+    CORE.addHeadFile('/templates/users/css/edit.css')
 
     if CORE.p[1] == 'add':
         title = 'Добавить'

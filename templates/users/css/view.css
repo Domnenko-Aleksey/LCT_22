@@ -1,0 +1,23 @@
+.users_view_container {
+	max-width: 400px;
+}
+.users_view_row.dan_flex_row {
+    justify-content: space-between;
+	gap: 5px;
+	margin-bottom: 10px;
+}
+
+.users_view_row::after {
+    content: '';
+    border-bottom: 1px solid #ccc;
+    order: -1;
+    flex-grow: 1;
+}
+
+.users_view_row .tc_l {
+	order: -2;
+}
+
+.users_view_row .tc_r {
+	font-weight:600;
+}

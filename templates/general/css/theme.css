@@ -1,0 +1,119 @@
+/* DARK THEME */
+
+:root {
+	--dark_theme_1: hsl(229deg 100% 6%);
+	--dark_theme_2: hsl(233deg 96% 8%);
+	--dark_theme_3: hsl(233deg 96% 12%);
+	--dark_theme_4: hsl(233deg 96% 13%);
+	--dark_theme_5: hsl(233deg 96% 14%);
+	--dark_theme_6: hsl(233deg 96% 15%);
+	--dark_theme_7: hsl(235deg 92% 16%);
+}
+
+
+.theme_ico {
+    width: 30px;
+    height: 30px;
+    display: block;
+    padding: 7px;
+    box-sizing: border-box;
+	border-radius: 50%;
+	background:#eee;
+	transition: background 0.3s;
+}
+
+.theme_ico_active {
+    border-radius: 50%;
+    background: var(--color-active);
+}
+
+
+.theme_ico_active use {
+	fill: #fff;
+}
+
+.theme_select {
+	width: 60px;
+    margin: 0 auto;
+	display: flex;
+    background: #eee;
+    border-radius: 30px;
+	margin: 5px;
+	cursor:pointer;
+}
+
+.theme_select svg {
+    width: 100%;
+    height: 100%;
+}
+
+.dark_theme {
+	color:#fff;
+}
+
+.dark_theme .left_panel, .dark_theme .footer  {
+	background-color:var(--dark_theme_1);
+	box-shadow:15px 0 35px rgb(47 102 255 / 10%);
+}
+
+.dark_theme .main  {
+	background-color:var(--dark_theme_2);
+}
+
+.dark_theme .mp_panel, .dark_theme .header {
+	background-color:var(--dark_theme_1);
+	box-shadow: 15px 0 35px rgb(47 102 255 / 10%);
+}
+
+.dark_theme .header_ico_square {
+	background-color:var(--dark_theme_1);
+	border: solid 1px var(--border-color);
+}
+
+.dark_theme .header_ico_square svg {
+    fill: #fff;
+}
+
+
+
+
+
+
+
+
+.dark_theme .admin_table tr:nth-child(even), 
+.dark_theme .mode_select_button:not(.active) {
+	background			:var(--dark_theme_3);
+	color: #fff;
+}
+
+.dark_theme .admin_table tr:nth-child(odd) {
+	background			:var(--dark_theme_2);
+	color: #fff;
+}
+
+.dark_theme .admin_table tr:nth-child(even) input {
+    border-color: var(--dark_theme_3);
+    background-color: var(--dark_theme_4);
+}
+
+.dark_theme .admin_table tr:nth-child(odd) input {
+    border-color: var(--dark_theme_2);
+    background-color: var(--dark_theme_3);
+}
+
+.dark_theme .admin_table th input {
+    border-color: var(--dark_theme_5);
+    background-color: var(--dark_theme_6);
+}
+
+.dark_theme [type="radio"]:checked + label, .dark_theme [type="radio"]:not(:checked) + label {
+    color: var(--dark_theme_4);
+}
+
+.dark_theme input, .dark_theme .input {
+    border-color:var(--dark_theme_4);
+    background-color: var(--dark_theme_3);
+    color: #fff;
+}
+

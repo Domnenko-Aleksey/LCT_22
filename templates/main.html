@@ -2,9 +2,11 @@
 <html>
 <head>
 <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'>
-<link rel="icon" href="/templates/images/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/templates/general/images/favicon.svg" type="image/svg+xml">
 <title>{{ title | safe }}</title>
-<link rel="stylesheet" href="/templates/css/main.css" />
+<link rel="stylesheet" href="/templates/general/css/main.css" />
+<link rel="stylesheet" href="/templates/general/css/theme.css" />
+<script src="/templates/general/js/theme.js"></script>
 {{ head | safe }}
 </head>
 <body>
@@ -14,32 +16,33 @@
 <div class="left_panel">
 	<div class="left_panel_header">Союз</div>
 	<a href="/statistics" class="left_ico_square">
-		<svg><use xlink:href="/templates/images/sprite.svg#users"></use></svg>
+		<svg><use xlink:href="/templates/general/images/sprite.svg#statistic"></use></svg>
 		<div class="left_ico_square_text">Статистика</div>
 	</a>
 	<a href="/predict" class="left_ico_square">
-		<svg><use xlink:href="/templates/images/sprite.svg#users"></use></svg>
+		<svg><use xlink:href="/templates/general/images/sprite.svg#chart"></use></svg>
 		<div class="left_ico_square_text">Перспективные отрасли</div>
 	</a>
 	<a href="/users" class="left_ico_square">
-		<svg><use xlink:href="/templates/images/sprite.svg#users"></use></svg>
+		<svg><use xlink:href="/templates/general/images/sprite.svg#users"></use></svg>
 		<div class="left_ico_square_text">Пользователи</div>
 	</a>
-	<a href="/import" class="left_ico_square">
-		<svg><use xlink:href="/templates/images/sprite.svg#users"></use></svg>
+	<a href="/import_data" class="left_ico_square">
+		<svg><use xlink:href="/templates/general/images/sprite.svg#import"></use></svg>
 		<div class="left_ico_square_text">Импорт данных</div>
 	</a>
 	<a href="/logs" class="left_ico_square">
-		<svg><use xlink:href="/templates/images/sprite.svg#users"></use></svg>
+		<svg><use xlink:href="/templates/general/images/sprite.svg#list"></use></svg>
 		<div class="left_ico_square_text">Журнал операций</div>
 	</a>
 </div>
 <div class="main">
 	<div class="header">
 		<a href="/" target="blank" class="header_ico_square">
-			<svg><use xlink:href="/templates/images/sprite.svg#home"></use></svg>
+			<svg><use xlink:href="/templates/general/images/sprite.svg#home"></use></svg>
 			<div class="header_ico_square_text">Главная</div>
 		</a>
+		<div class="theme_select"><div id="white_theme" class="theme_ico theme_ico_active" title="Светлая тема"><svg><use xlink:href="/templates/general/images/sprite.svg#sun"></use></svg></div><div id="dark_theme" class="theme_ico" title="Темная тема"><svg><use  xlink:href="/templates/general/images/sprite.svg#moon"></use></svg></div></div>
 	</div>
 	<div id="content" class="content">{{ content | safe }}</div>
 	<div class="footer">Команда УИИ</div>

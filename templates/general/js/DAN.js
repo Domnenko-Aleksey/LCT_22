@@ -47,7 +47,7 @@ DAN.modal = {
 
 		let cross = document.createElement('div')
 		cross.id = 'dan_modal_cross'
-		cross.innerHTML = '<svg><use xlink:href="/lib/svg/sprite.svg#delete"></use></svg>'
+		cross.innerHTML = '<svg><use xlink:href="/templates/general/images/sprite.svg#delete"></use></svg>'
 
 		let content = document.createElement('div')
 		content.id = 'dan_modal_content'
@@ -116,7 +116,7 @@ DAN.show = function(_class, _id){
 
 	function run() {
 		for (let i = 0; i < obj.sum; i++) {
-			obj.img_arr[i].style.cursor = 'url(/lib/DAN/lupa.png), auto'
+			obj.img_arr[i].style.cursor = 'url(/templates/images/lupa.png), auto'
 
 			obj.img_arr[i].onclick = (e)=>{
 				// Создаём модальное окно
@@ -157,7 +157,7 @@ DAN.show = function(_class, _id){
 						if(_but == 'button'){
 							if(!obj.timer){
 								DAN.$('dan_show_nav_play').removeChild(DAN.$('dan_show_nav_play').lastChild)
-								DAN.$('dan_show_nav_play').insertAdjacentHTML('afterbegin', '<svg class="dan_show_nav"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/lib/svg/sprite.svg#pause"></use></svg>')
+								DAN.$('dan_show_nav_play').insertAdjacentHTML('afterbegin', '<svg class="dan_show_nav"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/templates/general/images/sprite.svg#pause"></use></svg>')
 							}
 							else{						
 								obj.stop()
@@ -223,23 +223,23 @@ class DAN_show{
 		// Навигация
 		let cross = document.createElement('div')
 		cross.id = 'dan_show_cross'
-		cross.innerHTML = '<svg><use xlink:href="/lib/svg/sprite.svg#delete"></use></svg>'
+		cross.innerHTML = '<svg><use xlink:href="/templates/general/images/sprite.svg#delete"></use></svg>'
 		this.wrap.insertAdjacentElement('afterbegin', cross)
 
 		let nav_left = document.createElement('div')
 		nav_left.id = 'dan_show_nav_left'
 		this.wrap.insertAdjacentElement('afterbegin', nav_left)
-		nav_left.insertAdjacentHTML('afterbegin', '<svg class="dan_show_nav"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/lib/svg/sprite.svg#prev"></use></svg>')
+		nav_left.insertAdjacentHTML('afterbegin', '<svg class="dan_show_nav"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/templates/general/images/sprite.svg#prev"></use></svg>')
 
 		let nav_right = document.createElement('div')
 		nav_right.id = 'dan_show_nav_right'
 		this.wrap.insertAdjacentElement('beforeend', nav_right)
-		nav_right.insertAdjacentHTML('afterbegin', '<svg class="dan_show_nav"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/lib/svg/sprite.svg#next"></use></svg>')
+		nav_right.insertAdjacentHTML('afterbegin', '<svg class="dan_show_nav"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/templates/general/images/sprite.svg#next"></use></svg>')
 
 		let nav_play = document.createElement('div')
 		nav_play.id = 'dan_show_nav_play'
 		this.wrap.insertAdjacentElement('afterbegin', nav_play)
-		nav_play.insertAdjacentHTML('afterbegin', '<svg class="dan_show_nav"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/lib/svg/sprite.svg#play"></use></svg>')		
+		nav_play.insertAdjacentHTML('afterbegin', '<svg class="dan_show_nav"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/templates/general/images/sprite.svg#play"></use></svg>')		
 	}
 	
 	prev(){
@@ -256,7 +256,7 @@ class DAN_show{
 
 	stop(){
 		DAN.$('dan_show_nav_play').removeChild(DAN.$('dan_show_nav_play').lastChild)
-		DAN.$('dan_show_nav_play').insertAdjacentHTML('afterbegin', '<svg class="dan_show_nav"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/lib/svg/sprite.svg#play"></use></svg>')		
+		DAN.$('dan_show_nav_play').insertAdjacentHTML('afterbegin', '<svg class="dan_show_nav"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/templates/general/images/sprite.svg#play"></use></svg>')		
 		clearTimeout(this.timer)
 		this.timer = false
 	}

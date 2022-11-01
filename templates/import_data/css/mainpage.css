@@ -1,0 +1,53 @@
+/* --- Flex - таблица --- */
+#dan_modal_content .dan_flex_row div {
+	gap: 10px;
+}
+
+.modal_tc_l {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    text-align: right;
+    justify-content: flex-end;
+	width: 50%;
+}
+
+.modal_tc_r {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+	width: 50%;
+	min-height:50px;
+}
+
+.import_data_info {
+    padding: 15px 0;
+    border-radius: 15px;
+    font-size: 14px;
+    flex-grow: 1;
+}
+
+#import_data_date {
+    padding-left: 10px;
+    font-weight: 600;
+}
+
+#import_data_settings_button, #import_data_manual_button {
+    background: #fff;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-size: 14px;
+    margin: 0 5px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 2px 30px 2px;
+	cursor:pointer;
+	transition: .3s ease;
+}
+
+#import_data_settings_button:hover, #import_data_manual_button:hover {
+	transform:scale(1.05);
+}
+
+#items_progress {
+	width: 100%;
+    height: 30px;
+}

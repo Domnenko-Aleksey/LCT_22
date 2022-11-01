@@ -15,6 +15,7 @@ from Core import Core
 from auth import auth
 from mainpage import mainpage
 from users import users
+from import_data import import_data
 
 
 app = web.Application(client_max_size=1024**100)
@@ -50,15 +51,11 @@ async def index(request):
     if CORE.p[0] == 'auth':
         return web.HTTPFound('/')
 
-    # Вызов функций по ключу
+    # Вызов компонента
     functions = {
         '': mainpage.mainpage,
         'users': users.users,
-        # 'users': users.router,
-        # 'sections': sections.router,
-        # 'items': items.router,
-        # 'qa': qa.qa,
-        # 'com': components.router,
+        'import_data': import_data.import_data,
     }
 
     if (CORE.p[0] not in functions):

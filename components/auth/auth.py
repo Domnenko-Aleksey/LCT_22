@@ -29,8 +29,8 @@ def auth(CORE):
 
     if not CORE.auth:
         # Нет авторизации - выводим фому
-        CORE.addHeadFile('/templates/css/DAN.css')
-        CORE.addHeadFile('/templates/css/auth.css')
+        CORE.addHeadFile('/templates/general/css/DAN.css')
+        CORE.addHeadFile('/templates/general/css/auth.css')
 
         CORE.title = 'Авторизация'
         CORE.content = '''<form method="post" action="/auth">

@@ -11,6 +11,7 @@ class Core:
         self.db_connect = False  # Соединение с базой данных, инициализируем ниже
         self.db = False  # con.cursor()
         self.mysql_connect()
+        self.data = False  # После инициализации при загрузке будет словарь с параметрами
 
     
     # Подключаем базу данных

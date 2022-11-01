@@ -32,63 +32,63 @@
 }
 
 .dan_contextmenu_add {
-	background			:url('/lib/DAN/contextmenu/images/add.png') no-repeat left center;
+	background			:url('/templates/general/contextmenu/images/add.png') no-repeat left center;
 }
 
 .dan_contextmenu_copy {
-	background			:url('/lib/DAN/contextmenu/images/copy.png') no-repeat left center;
+	background			:url('/templates/general/contextmenu/images/copy.png') no-repeat left center;
 }
 
 .dan_contextmenu_edit {
-	background			:url('/lib/DAN/contextmenu/images/edit.png') no-repeat left center;
+	background			:url('/templates/general/contextmenu/images/edit.png') no-repeat left center;
 }
 
 .dan_contextmenu_help {
-	background			:url('/lib/DAN/contextmenu/images/help.png') no-repeat left center;
+	background			:url('/templates/general/contextmenu/images/help.png') no-repeat left center;
 }
 
 .dan_contextmenu_up {
-	background			:url('/lib/DAN/contextmenu/images/up.png') no-repeat left center;
+	background			:url('/templates/general/contextmenu/images/up.png') no-repeat left center;
 }
 
 .dan_contextmenu_down {
-	background			:url('/lib/DAN/contextmenu/images/down.png') no-repeat left center;
+	background			:url('/templates/general/contextmenu/images/down.png') no-repeat left center;
 }
 
 .dan_contextmenu_pub {
-	background			:url('/lib/DAN/contextmenu/images/pub.png') no-repeat left center;
+	background			:url('/templates/general/contextmenu/images/pub.png') no-repeat left center;
 }
 
 .dan_contextmenu_unpub {
-	background			:url('/lib/DAN/contextmenu/images/unpub.png') no-repeat left center;
+	background			:url('/templates/general/contextmenu/images/unpub.png') no-repeat left center;
 }
 
 .dan_contextmenu_block {
-	background			:url('/lib/DAN/contextmenu/images/block.png') no-repeat left center;
+	background			:url('/templates/general/contextmenu/images/block.png') no-repeat left center;
 }
 
 .dan_contextmenu_unblock {
-	background			:url('/lib/DAN/contextmenu/images/unblock.png') no-repeat left center;
+	background			:url('/templates/general/contextmenu/images/unblock.png') no-repeat left center;
 }
 
 .dan_contextmenu_tools {
-	background			:url('/lib/DAN/contextmenu/images/tools.png') no-repeat left center;
+	background			:url('/templates/general/contextmenu/images/tools.png') no-repeat left center;
 }
 
 .dan_contextmenu_orders {
-	background			:url('/lib/DAN/contextmenu/images/orders.png') no-repeat left center;
+	background			:url('/templates/general/contextmenu/images/orders.png') no-repeat left center;
 }
 
 .dan_contextmenu_import {
-	background			:url('/lib/DAN/contextmenu/images/import.png') no-repeat left center;
+	background			:url('/templates/general/contextmenu/images/import.png') no-repeat left center;
 }
 
 .dan_contextmenu_export {
-	background			:url('/lib/DAN/contextmenu/images/export.png') no-repeat left center;
+	background			:url('/templates/general/contextmenu/images/export.png') no-repeat left center;
 }
 
 .dan_contextmenu_delete {
-	background			:url('/lib/DAN/contextmenu/images/delete.png') no-repeat left center;
+	background			:url('/templates/general/contextmenu/images/delete.png') no-repeat left center;
 }
 
 

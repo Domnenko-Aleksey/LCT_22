@@ -10,7 +10,7 @@ from users import delete
 
 
 def users(CORE):
-    CORE.debug('PATH: /teplates/users/users.py (router)')
+    CORE.debug('PATH: /users/users.py (router)')
 
     # Вызов функций по ключу
     functions = {

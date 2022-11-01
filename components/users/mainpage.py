@@ -1,14 +1,14 @@
 from Users import Users
 
 def mainpage(CORE):
-    CORE.debug('PATH: /templates/users/mainpage.py')
+    CORE.debug('PATH: /users/mainpage.py')
 
-    CORE.addHeadFile('/templates/css/DAN.css')
-    CORE.addHeadFile('/templates/js/DAN.js')
-    CORE.addHeadFile('/templates/css/contextmenu.css')
-    CORE.addHeadFile('/templates/js/contextmenu.js')
-    CORE.addHeadFile('/templates/css/list.css')
-    CORE.addHeadFile('/templates/js/users_list.js')
+    CORE.addHeadFile('/templates/general/css/DAN.css')
+    CORE.addHeadFile('/templates/general/js/DAN.js')
+    CORE.addHeadFile('/templates/contextmenu/css/contextmenu.css')
+    CORE.addHeadFile('/templates/contextmenu/js/contextmenu.js')
+    CORE.addHeadFile('/templates/users/css/list.css')
+    CORE.addHeadFile('/templates/users/js/users_list.js')
 
     USER = Users(CORE)
     users = USER.getUsersList()
@@ -21,7 +21,7 @@ def mainpage(CORE):
             <td style="width:50px">{u['id']}</td>
             <td style="width:50px">
                 <svg class="dan_contextmenu_ico contextmenu_menu" title="Действия" data-id="{u['id']}">
-                    <use xlink:href="/templates/images/sprite.svg#menu"></use>
+                    <use xlink:href="/templates/general/images/sprite.svg#menu"></use>
                 </svg>
             </td>
             <td><a target="blank" href="/users/view/{u['id']}">{u['name']} {u['surname']}</a></td>
@@ -37,7 +37,7 @@ def mainpage(CORE):
     CORE.content = f'''
         <div class="flex_row_start">
             <a href="/users/add" target="blank" class="ico_rectangle_container">
-                <svg><use xlink:href="/templates/images/sprite.svg#add"></use></svg>
+                <svg><use xlink:href="/templates/general/images/sprite.svg#add"></use></svg>
                 <div class="ico_rectangle_text">Добавить пользователя</div>
             </a>
         </div>
