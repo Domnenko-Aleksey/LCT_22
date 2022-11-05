@@ -4,8 +4,7 @@ window.addEventListener('DOMContentLoaded', function(){
 	let white_theme = document.getElementById('white_theme');	
 	
 	
-	if (dark_theme) {		
-		
+	if (dark_theme) {
 		white_theme.onclick = function() {		
 			white_theme.classList.add('theme_ico_active');
 			dark_theme.classList.remove('theme_ico_active');
@@ -22,39 +21,23 @@ window.addEventListener('DOMContentLoaded', function(){
 			document.cookie = "dan_theme=dark";		
 		}
 		
-		
 		let dan_theme_results = document.cookie.match(/dan_theme=(.+?)(;|$)/);
-		console.log(dan_theme_results[1]); // user
 		
-		if (dan_theme_results[1] == 'dark') {
-			dark_theme.classList.add('theme_ico_active');		
-			white_theme.classList.remove('theme_ico_active');	
-			body.classList.add('dark_theme');		
-			body.classList.remove('white_theme');
-			document.cookie = "dan_theme=dark";	
-		} else {
-			white_theme.classList.add('theme_ico_active');
-			dark_theme.classList.remove('theme_ico_active');
-			body.classList.add('white_theme');		
-			body.classList.remove('dark_theme');
-			document.cookie = "dan_theme=white";
+		if (dan_theme_results != null) {
+			if (dan_theme_results[1] == 'dark') {
+				dark_theme.classList.add('theme_ico_active');		
+				white_theme.classList.remove('theme_ico_active');	
+				body.classList.add('dark_theme');		
+				body.classList.remove('white_theme');
+				document.cookie = "dan_theme=dark";	
+			} else {
+				white_theme.classList.add('theme_ico_active');
+				dark_theme.classList.remove('theme_ico_active');
+				body.classList.add('white_theme');		
+				body.classList.remove('dark_theme');
+				document.cookie = "dan_theme=white";
+			}
 		}
-		
-		/*
-		if(document.cookie == "dan_theme=dark") {
-			dark_theme.classList.add('theme_ico_active');		
-			white_theme.classList.remove('theme_ico_active');	
-			body.classList.add('dark_theme');		
-			body.classList.remove('white_theme');
-			document.cookie = "dan_theme=dark";	
-		} else {
-			white_theme.classList.add('theme_ico_active');
-			dark_theme.classList.remove('theme_ico_active');
-			body.classList.add('white_theme');		
-			body.classList.remove('dark_theme');
-			document.cookie = "dan_theme=white";	
-		}
-	*/
 	}
 
 });

@@ -40,6 +40,7 @@ class Core:
         self.content = ''  # Основное содержимое
         self.modules = {}  # Словарь модулей
         self.headFile = []  # Файлы для вывода в шапке шаблона
+        self.headCode = ''  # Строка с кодом для вывода в <HEAD>
         self.auth = 0  # Авторизация 0 => нет; 1 - 9 => администраторы; 10 - 100 => пользователи
         self.session = False
         self.db_connect.ping(reconnect=True)  # Проверяем соединение и если оно закрыто - открываем
@@ -72,6 +73,7 @@ class Core:
                 out += '<script src="' + file + '"></script>'
             if file_list[-1] == 'css':
                 out += '<link rel="stylesheet" href="' + file + '" />'
+        out += self.headCode
         return out
 
     

@@ -32,7 +32,9 @@
     font-weight: 600;
 }
 
-#import_data_settings_button, #import_data_manual_button {
+.import_data_button {
+	display: flex;
+    align-items: center;
     background: #fff;
     padding: 15px 30px;
     border-radius: 15px;
@@ -43,8 +45,23 @@
 	transition: .3s ease;
 }
 
-#import_data_settings_button:hover, #import_data_manual_button:hover {
-	transform:scale(1.05);
+.import_data_button:hover {
+	background: var(--color-active);
+	transform:scale(.97);
+	color:#fff;
+	box-shadow: 0px 3px 5px hsl(343deg 98% 52% / 15%);
+}
+
+.import_data_button svg {
+	width:25px;
+	height:25px;
+	fill: var(--color-active);
+	margin-right: 10px;
+	transition: .3s ease;
+}
+
+.import_data_button:hover svg {
+	fill:#fff;
 }
 
 #items_progress {

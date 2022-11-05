@@ -73,6 +73,8 @@ class ImportData:
         region = pattern.sub('', df_row['Region'])  # Получаем название региона
         region_id = self.getRegionIdByRegion(region)
 
+        tnved_2 = str(df_row['tnved']).strip().strip()[:2]
+
         period_list = df_row['period'].strip().split('/')
         period = f'{period_list[1]}-{period_list[0]}-01'
 
@@ -82,6 +84,7 @@ class ImportData:
             period = %s, 
             nastranapr = %s, 
             tnved = %s, 
+            tnved_2 = %s, 
             edizm = %s, 
             stoim = %s, 
             netto = %s, 
@@ -95,6 +98,7 @@ class ImportData:
             period,
             str(df_row['nastranapr']).strip(),
             str(df_row['tnved']).strip(),
+            tnved_2,
             str(df_row['edizm']).strip(),
             str(df_row['Stoim']).strip(),
             str(df_row['Netto']).strip(),

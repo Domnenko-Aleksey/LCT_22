@@ -16,6 +16,9 @@ from auth import auth
 from mainpage import mainpage
 from users import users
 from import_data import import_data
+from stat_data import stat_data
+from predict import predict
+from promising import promising
 
 
 app = web.Application(client_max_size=1024**100)
@@ -56,6 +59,9 @@ async def index(request):
         '': mainpage.mainpage,
         'users': users.users,
         'import_data': import_data.import_data,
+        'stat_data': stat_data.stat_data,
+        'promising': promising.promising,
+        'predict': predict.predict
     }
 
     if (CORE.p[0] not in functions):

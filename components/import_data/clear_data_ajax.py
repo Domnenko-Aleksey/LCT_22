@@ -1,7 +1,6 @@
 import json
 from ImportData import ImportData
 
-IMPORTDATA = ImportData()
 
 def clear_data_ajax(CORE):
     CORE.debug('PATH: /clear_data_ajax/load_data.py')

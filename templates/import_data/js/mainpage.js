@@ -53,6 +53,7 @@ IMPORT_DATA = {
         console.log('PFUH')
         let content =
         '<h1 id="modal_h1" style="text-align:center;">Загрузка данных</h1>' +
+        '<div style="text-align:center;margin:20px 0px">Для загрузки потребуется некоторое продолжительное время.</div>' +
         '<div class="items_progress_html">' +
             '<span id="items_progress_html">' + 
                 'Обработано: <b id="items_progress_current"></b> из <b id="items_progress_count"></b>' +
@@ -91,6 +92,7 @@ IMPORT_DATA = {
 			'<div style="text-align:center;margin:20px 0px">' +
 				'<input id="modal_checkbox" type="checkbox" name="check"> Подтверждаю удаление данных' +
 			'</div>' +
+			'<div style="text-align:center;margin:20px 0px">База содержит несколько миллионов записей. Для удаления потребуется некоторое продолжительное время</div>' +
 			'<div class="dan_flex_row">' +
 				'<div style="margin-right:5px">' +
 					'<input id="modal_submit" class="dan_button_red" type="submit" name="submit" value="Очистить">' +
@@ -119,5 +121,6 @@ IMPORT_DATA = {
 		DAN.ajax('/import_data/clear_data_ajax', form, function(data) {
             DAN.modal.add('БАЗА ДАННЫХ ОЧИЩЕНА')
 		}) 
+        DAN.modal.spinner()
     }
 }

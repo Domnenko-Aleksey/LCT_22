@@ -1,0 +1,70 @@
+.select {
+    width: 100%;
+    max-height: 280px;
+    border-radius: 5px;
+    border: 0;
+    padding: 10px;
+    box-shadow: 0 5px 15px rgb(34 34 34 / 10%);
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+#answer_content {
+	background: #fff;
+}
+
+#answer_content h1, #answer_content h3, #answer_content > div {
+    margin-left: 20px;
+}
+
+#answer_content > div {
+    margin-bottom: 20px;
+}
+
+#answer_content img {
+    max-width: 100%;
+}
+
+#answer_content .description {
+	text-align: left;
+    padding: 0 0 10px 0;
+	margin-left: 20px;
+}
+
+
+#answer_content .dan_flex_row {
+	page-break-after:always;
+}
+
+
+#answer_content .admin_table th, #answer_content .admin_table td {
+	font-size: 12px;
+	padding: 0 5px;
+}
+
+.graph_block {
+	display: flex;
+    align-items: center;
+	flex-basis: 50%;
+}
+
+#generate_pdf_wrap {
+    background: #fff;
+    padding-top: 40px;
+    border-top: 5px solid #ccc;
+    margin-top: 40px;
+}
+
+.generate_pdf_button {
+    display: flex;
+    align-items: center;
+    padding: 25px 45px;
+}
+
+.generate_pdf_button svg {
+	width:25px;
+	height:25px;
+	fill: #fff;
+	margin-right: 10px;
+	transition: .3s ease;
+}
