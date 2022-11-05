@@ -75,7 +75,8 @@ def get_stat_ajax(CORE):
         labels = ['Экспорт', 'Импорт']
 
         plt.figure(figsize=(7, 7))
-        plt.pie(fracs, labels=labels, autopct='%1.1f%%', shadow=True, explode=(0, 0.1), textprops = {"fontsize":16})
+        plt.pie(fracs, labels=labels, autopct='%1.1f%%', shadow=True, explode=(0, 0.1), 
+            textprops = {"fontsize":16}, colors=[CORE.color_1, CORE.color_2])
         plt.title('Экспорт / Импорт')
         plt.show()
         plt.savefig('files/stat/export_import_pie.png')
@@ -121,9 +122,9 @@ def get_stat_ajax(CORE):
     plt.ylabel('Оборот', fontsize=16)
 
     if CORE.post['napr'] == 'ИМЭК' or CORE.post['napr'] == 'ЭК':
-        plt.bar(x-0.4, df_export_sum['stoim'], width, label='Экспорт', color='#1f77b4')
+        plt.bar(x-0.4, df_export_sum['stoim'], width, label='Экспорт', color=CORE.color_1)
     if CORE.post['napr'] == 'ИМЭК' or  CORE.post['napr'] == 'ИМ':
-        plt.bar(x, df_import_sum['stoim'], width, label='Импорт', color='#ff7f0e')
+        plt.bar(x, df_import_sum['stoim'], width, label='Импорт', color=CORE.color_2)
     plt.xticks(x, m_list, fontsize=10)
     plt.yticks(fontsize=16)
     plt.legend(loc='upper left', fontsize=16)
@@ -143,7 +144,7 @@ def get_stat_ajax(CORE):
     if CORE.post['napr'] == 'ИМЭК' or CORE.post['napr'] == 'ЭК':
         plt.figure(figsize=(10, 7))
         plt.title(label = 'ЭКСПОРТ, распределение по стоимости, логарифм.', fontsize=20)
-        plt.hist(df_export['stoim'], bins=20, facecolor='#1f77b4')
+        plt.hist(df_export['stoim'], bins=20, facecolor=CORE.color_1)
         plt.ylabel('Количество')
         plt.xlabel('Стоимость')
         plt.yscale('log')
@@ -160,7 +161,7 @@ def get_stat_ajax(CORE):
     if CORE.post['napr'] == 'ИМЭК' or CORE.post['napr'] == 'ИМ':
         plt.figure(figsize=(10, 7))
         plt.title(label = 'ИМПОРТ, распределение по стоимости, логарифм.', fontsize=20)
-        plt.hist(df_import['stoim'], bins=20, facecolor='#ff7f0e')
+        plt.hist(df_import['stoim'], bins=20, facecolor=CORE.color_1)
         plt.ylabel('Количество')
         plt.xlabel('Стоимость')
         plt.yscale('log')
@@ -207,7 +208,7 @@ def get_stat_ajax(CORE):
 
     # df_sort = df.sort_values(by='stoim', ascending=False)
 
-    i = 0
+    i = 1
     for idx, d in df.sort_values(by=['stoim'], ascending=False).iterrows():
         napr = 'импорт' if d['napr'] == 'ИМ' else 'экспорт'
         html += '<tr>'
@@ -222,7 +223,7 @@ def get_stat_ajax(CORE):
         html +=     f'<td>{d["stoim"]}</td>'
         html += '</tr>'
 
-        if i > 100:
+        if i >= 100:
             html += '</table>'
             break
 

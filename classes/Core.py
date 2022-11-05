@@ -12,6 +12,8 @@ class Core:
         self.db = False  # con.cursor()
         self.mysql_connect()
         self.data = False  # После инициализации при загрузке будет словарь с параметрами
+        self.color_1 = '#27ae60'
+        self.color_2 = '#e67e22'
 
     
     # Подключаем базу данных

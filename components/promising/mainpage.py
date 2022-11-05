@@ -21,12 +21,10 @@ def mainpage(CORE):
 
     CORE.content = f'''
         <h1>Перспективные отрасли</h1>
-        <details><summary>Выберите регион</summary>					
-                <select id="select_region" class="stat_select" size="10" name="region[]" value="">
-                    {region_options_html}
-                </select>
-                <div class="dan_flex_row result_container" id="result_region"></div>
-        </details>
+        <h3>Выберите регион</h3>					
+            <select id="select_region" class="select" name="region[]" value="">
+                {region_options_html}
+            </select><br><br>                
         <div id="send_result_button" class="dan_button_red">Применить</div>
-        <div id="answer_content"></div>	
+        <div id="answer_content"></div>
     '''

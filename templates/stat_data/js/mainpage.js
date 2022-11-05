@@ -31,31 +31,57 @@ STAT_DATA = {
 		/**/
 		
 		/* calc-remove */
-		let btn_close = document.getElementsByClassName('result_close');
+		let btn_close = document.getElementsByClassName('result_close');		
 		let s_options = document.querySelectorAll('.stat_select option');
 		/**/
 
-
-
+		
+		
 		/* select function */
-		for (let i = 0; i < s_options.length; i++) { 
-			active_num = 0;
-			s_options[i].addEventListener("click", function () {	
-				active_num += 1;				
-				if (s_options[i].parentNode.id == 'select_country') {
-					r_country.innerHTML += '<div class="filter_result filter_result_country" data-id="'+ s_options[i].value +'" data-num="'+ active_num +'">' + s_options[i].textContent + '<div class="result_close">x</div></div>';	
-					STAT_DATA.country_calc();
-				} else if (s_options[i].parentNode.id == 'select_region') {
-					r_region.innerHTML += '<div class="filter_result filter_result_region" data-id="'+ s_options[i].value +'" data-num="'+ active_num +'">' + s_options[i].textContent + '<div class="result_close">x</div></div>';	
-					STAT_DATA.region_calc();
-				} else if (s_options[i].parentNode.id == 'select_tnved') {
-					r_tnved.innerHTML += '<div class="filter_result filter_result_tnved" data-id="'+ s_options[i].value +'" data-num="'+ active_num +'">' + s_options[i].textContent + '<div class="result_close">x</div></div>';	
-					STAT_DATA.tnved_calc();
-				}
-				s_options[i].classList.add('select_active');								
-				s_options[i].setAttribute('data-active', active_num);
+		
+		for (let i = 0; i < s_country.length; i++) { 		
+		
+		s_country.onchange = () => {
+		
+			active_num = s_country.selectedIndex;
+
+				r_country.innerHTML += '<div class="filter_result filter_result_country" data-id="'+ s_country[active_num].value +'" data-num="'+ active_num +'">' + s_country[active_num].textContent + '<div class="result_close">x</div></div>';	
+				STAT_DATA.region_calc();
+				
+				s_country[active_num].classList.add('select_active');								
+				s_country[active_num].setAttribute('data-active', active_num);
 				f_remove_button();
-			}, false);
+			}
+		}
+		
+		for (let i = 0; i < s_region.length; i++) { 		
+		
+		s_region.onchange = () => {
+		
+			active_num = s_region.selectedIndex;
+
+				r_region.innerHTML += '<div class="filter_result filter_result_region" data-id="'+ s_region[active_num].value +'" data-num="'+ active_num +'">' + s_region[active_num].textContent + '<div class="result_close">x</div></div>';	
+				STAT_DATA.region_calc();
+				
+				s_region[active_num].classList.add('select_active');								
+				s_region[active_num].setAttribute('data-active', active_num);
+				f_remove_button();
+			}
+		}
+		
+		for (let i = 0; i < s_tnved.length; i++) { 		
+		
+		s_tnved.onchange = () => {
+		
+			active_num = s_tnved.selectedIndex;
+
+				r_tnved.innerHTML += '<div class="filter_result filter_result_tnved" data-id="'+ s_tnved[active_num].value +'" data-num="'+ active_num +'">' + s_tnved[active_num].textContent + '<div class="result_close">x</div></div>';	
+				STAT_DATA.region_calc();
+				
+				s_tnved[active_num].classList.add('select_active');								
+				s_tnved[active_num].setAttribute('data-active', active_num);
+				f_remove_button();
+			}
 		}
 		
 		
@@ -87,6 +113,7 @@ STAT_DATA = {
 		STAT_DATA.arr_country = [];			
 		for (let i = 0; i < country.length; i++) { 
 			STAT_DATA.arr_country.push(country[i].getAttribute('data-id'));
+			console.log(STAT_DATA.arr_country)
 		}
 	},
 	

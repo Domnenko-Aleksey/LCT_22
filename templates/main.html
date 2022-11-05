@@ -14,7 +14,7 @@
 	<div id="content">{{ content | safe }}</div>
 {% else %}
 <div class="left_panel">
-	<div class="left_panel_header">Союз</div>
+	<div class="left_panel_header">Команда УИИ</div>
 	<a href="/stat_data" class="left_ico_square">
 		<svg><use xlink:href="/templates/general/images/sprite.svg#statistic"></use></svg>
 		<div class="left_ico_square_text">Статистика</div>
@@ -23,7 +23,7 @@
 		<svg><use xlink:href="/templates/general/images/sprite.svg#chart"></use></svg>
 		<div class="left_ico_square_text">Перспективные отрасли</div>
 	</a>
-	<a href="/predict" class="left_ico_square">
+	<a href="/predict" class="left_ico_square" style="display:none;">
 		<svg><use xlink:href="/templates/general/images/sprite.svg#chart2"></use></svg>
 		<div class="left_ico_square_text">Предсказание тренда</div>
 	</a>
@@ -35,7 +35,7 @@
 		<svg><use xlink:href="/templates/general/images/sprite.svg#users"></use></svg>
 		<div class="left_ico_square_text">Пользователи</div>
 	</a>
-	<a href="/logs" class="left_ico_square">
+	<a href="/logs" class="left_ico_square" style="display:none;">
 		<svg><use xlink:href="/templates/general/images/sprite.svg#list"></use></svg>
 		<div class="left_ico_square_text">Журнал операций</div>
 	</a>

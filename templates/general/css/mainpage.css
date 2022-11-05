@@ -5,8 +5,7 @@
     padding: 20px;
     height: 300px;
     width: 300px;
-    font-size: 13px;
-    color: #7777;
+    font-size: 14px;
     box-sizing: border-box;
     /* border: solid 1px #c7c7c7; */
     border-radius: 10px;
@@ -22,4 +21,22 @@
     text-decoration: none;
     color: var(--color-active);
     margin-bottom: 10px;
+}
+
+#a_presentation, #a_documentation {
+	display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+	justify-content: flex-start;
+	margin-top: 20px;
+	font-size: 20px;
+	color: var(--color-active);
+}
+
+.pdf_svg {
+	height: 50px;
+    width: 50px;
+	margin-right: 10px;
+	fill: var(--color-active);
 }
