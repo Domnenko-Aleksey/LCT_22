@@ -10,7 +10,7 @@ def mainpage(CORE):
 	CORE.addHeadFile('/templates/contextmenu/js/contextmenu.js')
 	CORE.addHeadFile('/templates/stat_data/css/mainpage.css')
 	CORE.addHeadFile('/templates/stat_data/js/mainpage.js')
-	CORE.addHeadFile('/templates/stat_data/js/pdf.js')
+	CORE.addHeadFile('/templates/general/js/pdf.js')
 
 	GETDATA = GetData(CORE)
 	regions = GETDATA.getRegions()

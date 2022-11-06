@@ -182,11 +182,10 @@ def get_stat_ajax(CORE):
     if CORE.post['napr'] == 'ИМ':
         title = 'Импорт'
 
-    countries = CORE.post['strana'].replace(',', ', ')
 
     html =  '<h1>' + title + '</h1>'
-    html += '<div class="description">Страны: <b>' + countries + '</b></div>'
-    html += '<div class="description">Регионы: <b>' + CORE.post['region'] + '</b></div>'
+    html += '<div class="description">Страны: <b>' + CORE.post['strana_name'] + '</b></div>'
+    html += '<div class="description">Регионы: <b>' + CORE.post['region_name'] + '</b></div>'
     html += '<div class="description">ТНВЕД: <b>' + CORE.post['tnved_2_name'] + '</b></div>'
     html += '<div class="description">Период от: <b>' + CORE.post['period_start'] + '</b> до: <b>' + CORE.post['period_end'] + '</b></div>'
     html += '<div class="dan_flex_row">'

@@ -4,10 +4,17 @@ window.addEventListener('DOMContentLoaded', function(){
 
 
 IMPORT_DATA = {
+    // Код доступа для удаления базы, если всё - таки любопытный программист решит проверить работу
+    // Всё удаляется и загружается, мы именно так и загружаем базу, только надо имень ввиду
+    // что загрузка может идти около часа, т.к около 5 миллиона строк данных надо обработать и загрузить
+    // а на данном сервере ещё 400 сайтов крутиться.
+    // Никакой компонент не будет работать, пока база данных не загрузиться целиком
+    code: 'delete',  
+
     // Инициализация
     init() {
         DAN.$('import_data_settings_button').onclick = IMPORT_DATA.settings_modal
-        DAN.$('import_data_manual_button').onclick = IMPORT_DATA.load_data_progress
+        DAN.$('import_data_manual_button').onclick = IMPORT_DATA.load_data_modal
         DAN.$('clear_data_button').onclick = IMPORT_DATA.clear_data_modal
     },
 
@@ -47,10 +54,40 @@ IMPORT_DATA = {
     },
 
 
+    // Очищает базу данных и загружает новые данные
+    load_data_modal() {
+        let content =
+            '<div style="text-align:center;font-size:20px">Очистить базу данных и загрузить новые данные</div>' +
+            '<div style="text-align:center;margin:20px 0px">' +
+                '<div>Введите код доступа:</div>' + 
+                '<input id="modal_code" class="dan_input" type="password" name="modal_code" requered>' +
+            '</div>' +
+            '<div style="text-align:center;margin:20px 0px">База содержит несколько миллионов записей. Для загрузки может потребоваться час, т.к. на сервере есть ещё несколько сотен сайтов</div>' +
+            '<div class="dan_flex_row">' +
+                '<div style="margin-right:5px">' +
+                    '<input id="modal_submit" class="dan_button_red" type="submit" name="submit" value="Загрузить">' +
+                '</div>' +
+                '<div style="margin-left:5px">' +
+                    '<input id="modal_cancel" class="dan_button_white" type="submit" name="cancel" value="Отменить">' +
+                '</div>' +
+            '</div>'
+        DAN.modal.add(content, 400)
+        DAN.$('modal_cancel').onclick = DAN.modal.del
+        DAN.$('modal_submit').onclick = () => {
+            let code = DAN.$('modal_code').value
+            if (code != IMPORT_DATA.code) {
+                alert('Не верный код доступа')
+                return
+            } else {
+                IMPORT_DATA.load_data_progress()
+            }
+        }
+    },
+
+
     // Загрузка данных ajax
     load_data_progress() {
 		let form = new FormData()
-        console.log('PFUH')
         let content =
         '<h1 id="modal_h1" style="text-align:center;">Загрузка данных</h1>' +
         '<div style="text-align:center;margin:20px 0px">Для загрузки потребуется некоторое продолжительное время.</div>' +
@@ -90,7 +127,8 @@ IMPORT_DATA = {
 		let content =
 			'<div style="text-align:center;font-size:20px">Очистить базу данных</div>' +
 			'<div style="text-align:center;margin:20px 0px">' +
-				'<input id="modal_checkbox" type="checkbox" name="check"> Подтверждаю удаление данных' +
+                '<div>Введите код доступа для удаления базы:</div>' + 
+				'<input id="modal_code" class="dan_input" type="password" name="modal_code" requered>' +
 			'</div>' +
 			'<div style="text-align:center;margin:20px 0px">База содержит несколько миллионов записей. Для удаления потребуется некоторое продолжительное время</div>' +
 			'<div class="dan_flex_row">' +
@@ -104,9 +142,9 @@ IMPORT_DATA = {
 		DAN.modal.add(content, 400)
 		DAN.$('modal_cancel').onclick = DAN.modal.del
 		DAN.$('modal_submit').onclick = () => {
-			let check = DAN.$('modal_checkbox')
-			if (!check.checked) {
-				alert('Вы не подтвердили удаление пользователя - необходимо поставить галочку')
+			let code = DAN.$('modal_code').value
+			if (code != IMPORT_DATA.code) {
+				alert('Не верный код доступа')
 				return
 			} else {
 				IMPORT_DATA.clear_data_ajax()
